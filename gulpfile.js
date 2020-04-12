@@ -57,8 +57,7 @@ exports.dev = series(
     copyUploads,
     buildJavaScript,
     compileScss,
-    startServer,
-    parallel(watchJavaScript, watchScss)
+    parallel(startServer, watchJavaScript, watchScss)
 );
 
 // exports.prod = series(
