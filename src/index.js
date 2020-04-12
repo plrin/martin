@@ -5,6 +5,8 @@ console.log('init');
  * 
  */
 
+const $song = document.querySelector('.song');
+
 const bindEvents = () => {
     const $figures = document.querySelectorAll('.article__figure');
 
@@ -17,6 +19,16 @@ const bindEvents = () => {
     for (let i = 0; i < $figures.length; i++) {
         const $figure = $figures[i];
         addFigureEvent($figure);
+    }
+
+    const $play = document.querySelector('.play');
+    if($play) {
+        $play.addEventListener('click', () => {
+            document.querySelector('.play-overlay').style.display = 'none';
+            if ($song.paused) {
+                $song.play();
+            }
+        });
     }
 };
 
@@ -49,3 +61,6 @@ const splitText = () => {
  */
 bindEvents();
 splitText();
+// if ($song) {
+//     $song.play();
+// }
