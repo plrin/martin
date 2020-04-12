@@ -32,7 +32,6 @@ const splitText = () => {
     const $text = document.querySelector('.header__greeting');
     const text = $text.textContent.trim();
     const letters = text.split('');
-    console.log('splitText -> letters', letters);
     let newMarkup = '';
     for (let i = 0; i < letters.length; i++) {
         const letter = letters[i] === ' ' ? '&nbsp;' : letters[i];
@@ -41,7 +40,6 @@ const splitText = () => {
     }
 
     $text.innerHTML = newMarkup;
-    console.log(newMarkup);
 };
 
 
