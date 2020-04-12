@@ -304,7 +304,7 @@ template {
   display: none; }
 
 body {
-  background-image: url("images/stars.gif"); }
+  background-image: url("uploads/stars.gif"); }
 
 * {
   box-sizing: border-box; }
