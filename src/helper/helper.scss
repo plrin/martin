@@ -1,0 +1,23 @@
+@mixin bp($size, $minmax: 'min', $dimension: 'width', $orientation: 'portrait', $endWidth: null) {
+    $bp-content: '';
+    $bp-orientation: '';
+    @if $orientation == landscape {
+        $bp-orientation: ' and (orientation: landscape)';
+    }
+
+    @if $minmax == 'max' {
+        $bp-content: (#{$minmax}-#{$dimension}: #{$size - 1})#{$bp-orientation};
+    } @else {
+        $bp-content: (#{$minmax}-#{$dimension}: #{$size})#{$bp-orientation};
+    }
+
+    @if ($endWidth != null) {
+        @media only screen and #{$bp-content} and (max-width: $endWidth - 1) {
+            @content;
+        }
+    } @else {
+        @media only screen and #{$bp-content} {
+            @content;
+        }
+    }
+}
