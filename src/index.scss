@@ -2,14 +2,14 @@
 @import './scss/variables.scss';
 @import 'normalize.css/normalize';
 
-@font-face {
-    font-family: "Impact";
-    src: url("/dist/fonts/impact.ttf") format("truetype");
-}
+// @font-face {
+//     font-family: "Impact";
+//     src: url("/dist/fonts/impact.ttf") format("truetype");
+// }
 
 body {
     background-image: url('../uploads/stars.gif');
-    font-family: "Impact", sans-serif;
+    font-family: 'Cutive Mono', sans-serif;
 }
 
 * {
@@ -64,6 +64,7 @@ body {
     font-size: 50px;
     
     span {
+        font-family: "Impact", sans-serif;
         display: inline-block;
         animation: upAndDown 1.5s infinite ease-in;
 
@@ -176,9 +177,12 @@ body {
 }
 
 .play {
+    font-family: "Impact", sans-serif;
     font-size: 30px;
     color: white;
-    background-color: red;
+    background-color: #FB2B88;
+    box-shadow: 0px -3px 0px 0px rgba(206,34,111,1);
+    border-radius: 10px;
     padding: 20px;
     border: 0;
     outline: 0;

@@ -303,13 +303,9 @@ template {
 [hidden] {
   display: none; }
 
-@font-face {
-  font-family: "Impact";
-  src: url("/dist/fonts/impact.ttf") format("truetype"); }
-
 body {
   background-image: url("../uploads/stars.gif");
-  font-family: "Impact", sans-serif; }
+  font-family: 'Cutive Mono', sans-serif; }
 
 * {
   box-sizing: border-box; }
@@ -345,6 +341,7 @@ body {
   margin-top: 30px;
   font-size: 50px; }
   .header__greeting span {
+    font-family: "Impact", sans-serif;
     display: inline-block;
     animation: upAndDown 1.5s infinite ease-in; }
     .header__greeting span:nth-child(n) {
@@ -417,9 +414,12 @@ body {
   align-items: center; }
 
 .play {
+  font-family: "Impact", sans-serif;
   font-size: 30px;
   color: white;
-  background-color: red;
+  background-color: #FB2B88;
+  box-shadow: 0px -3px 0px 0px #ce226f;
+  border-radius: 10px;
   padding: 20px;
   border: 0;
   outline: 0;
