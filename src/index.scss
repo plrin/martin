@@ -2,8 +2,14 @@
 @import './scss/variables.scss';
 @import 'normalize.css/normalize';
 
+@font-face {
+    font-family: "Impact";
+    src: url("/dist/fonts/impact.ttf") format("truetype");
+}
+
 body {
-    background-image: url('uploads/stars.gif');
+    background-image: url('/uploads/stars.gif');
+    font-family: "Impact", sans-serif;
 }
 
 * {
