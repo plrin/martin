@@ -303,8 +303,13 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: "Impact";
+  src: url("/dist/fonts/impact.ttf") format("truetype"); }
+
 body {
-  background-image: url("uploads/stars.gif"); }
+  background-image: url("/uploads/stars.gif");
+  font-family: "Impact", sans-serif; }
 
 * {
   box-sizing: border-box; }
@@ -386,7 +391,6 @@ body {
   .article__figure img {
     width: 100%;
     height: auto;
-    transform: scale(2);
     transition: transform .3s; }
 
 .article__text {

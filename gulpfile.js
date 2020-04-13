@@ -18,7 +18,12 @@ function clean() {
 function copyUploads() {
     return gulp.src('./src/uploads/*')
       .pipe(gulp.dest('./dist/uploads'));
-  }
+}
+
+function copyFonts() {
+    return gulp.src('./src/fonts/*')
+      .pipe(gulp.dest('./dist/fonts'));
+}
 
 function compileScss () {
     return gulp.src('./src/**/index.scss')
@@ -47,14 +52,14 @@ function startServer () {
 
 exports.build = series(
     clean,
-    copyUploads,
+    copyFonts,
     buildJavaScript,
     compileScss
 );
 
 exports.dev = series(
     clean,
-    copyUploads,
+    copyFonts,
     buildJavaScript,
     compileScss,
     parallel(startServer, watchJavaScript, watchScss)
