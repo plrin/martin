@@ -60,7 +60,7 @@ const splitText = () => {
  * 
  */
 bindEvents();
-splitText();
+// splitText();
 // if ($song) {
 //     $song.play();
 // }
