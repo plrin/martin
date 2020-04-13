@@ -108,7 +108,7 @@ body {
 .main__article {
     margin: 20px;
     flex: 0 0 calc(100% - 40px);
-    border: 4px solid green;
+    border: 4px solid #82f9e5;
     height: 100%;
 
     @include bp($size-m) {
