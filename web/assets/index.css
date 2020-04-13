@@ -303,6 +303,10 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: "Impact";
+  src: url("../assets/fonts/impact.ttf") format("truetype"); }
+
 body {
   background-image: url("../uploads/stars.gif");
   font-family: 'Cutive Mono', sans-serif; }
