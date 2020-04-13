@@ -11,18 +11,13 @@ sass.compiler = require('node-sass');
 function clean() {
   return del([
     // here we use a globbing pattern to match everything inside the `mobile` folder
-    'dist/**/*',
+    './web/assets/**/*',
   ]);
 };
 
-function copyUploads() {
-    return gulp.src('./src/uploads/*')
-      .pipe(gulp.dest('./dist/uploads'));
-}
-
 function copyFonts() {
     return gulp.src('./src/fonts/*')
-      .pipe(gulp.dest('./dist/fonts'));
+      .pipe(gulp.dest('./web/assets/fonts'));
 }
 
 function compileScss () {
@@ -30,7 +25,7 @@ function compileScss () {
         .pipe(sass({
             includePaths: ['node_modules']
         }).on('error', sass.logError))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./web/assets'));
 };
 
 function watchScss() {
@@ -39,7 +34,7 @@ function watchScss() {
 
 function buildJavaScript() {
     return gulp.src('./src/**/index.js')
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./web/assets'));
 };
 
 function watchJavaScript () {
@@ -47,7 +42,9 @@ function watchJavaScript () {
 }
 
 function startServer () {
-    connect.server();
+    connect.server({
+        root: './web',
+    });
 }
 
 exports.build = series(
